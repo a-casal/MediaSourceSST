@@ -11,7 +11,8 @@ const startPlayback = async (isEc3Audio: boolean) => {
     segments: audioSegments,
     initializationSegment: audioInitializationSegment,
   } = await getAudioFromManifest(
-      "https://g001-sf-eu-cmaf-prd-ak.pcdn01.cssott.com/SST/g2/GMO_00000000210233_92/SST_1676484729495-sPuUp_01/mpeg_cenc_2sec/master_manifest_default_r18.mpd?audio=all&subtitle=all&forcedNarrative=true&trickplay=true",
+  //    "https://g001-sf-eu-cmaf-prd-ak.pcdn01.cssott.com/SST/g2/GMO_00000000210233_92/SST_1676484729495-sPuUp_01/mpeg_cenc_2sec/master_manifest_default_r18.mpd?audio=all&subtitle=all&forcedNarrative=true&trickplay=true",
+        "https://live-dev-cdn7-tve.cdn.viaplay.tv/vp/kanal6/kanal6.isml/index.mpd",
     isEc3Audio
   );
 
@@ -21,8 +22,9 @@ const startPlayback = async (isEc3Audio: boolean) => {
     initializationSegment: videoInitializationSegment,
     duration,
   } = await getVideoFromManifest(
-      "https://g001-sf-eu-cmaf-prd-ak.pcdn01.cssott.com/SST/g2/GMO_00000000210233_92/SST_1676484729495-sPuUp_01/mpeg_cenc_2sec/master_manifest_default_r18.mpd?audio=all&subtitle=all&forcedNarrative=true&trickplay=true"  
-  );
+//      "https://g001-sf-eu-cmaf-prd-ak.pcdn01.cssott.com/SST/g2/GMO_00000000210233_92/SST_1676484729495-sPuUp_01/mpeg_cenc_2sec/master_manifest_default_r18.mpd?audio=all&subtitle=all&forcedNarrative=true&trickplay=true"  
+        "https://live-dev-cdn7-tve.cdn.viaplay.tv/vp/kanal6/kanal6.isml/index.mpd"
+);
 
   const videoMimeCodec = `video/mp4; codecs="${videoCodecs}"`;
 
