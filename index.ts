@@ -124,5 +124,5 @@ const startPlayback = async (isEc3Audio: boolean) => {
   mediaSource.addEventListener("sourceopen", onSourceOpen.bind(mediaSource));
 };
 
-const isEc3Audio = true;
+const isEc3Audio = false;
 startPlayback(isEc3Audio);
